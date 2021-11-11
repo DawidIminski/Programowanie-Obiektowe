@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ćw.3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int suma, x, y;
+            y = 0;
+            suma = 0;
+            for (x = 1; suma < 100; x++)
+            {
+                suma = suma + x;
+                if (suma > 100)
+                    y = x;
+            }
+            Console.WriteLine("Należy dodać do siebie {0} liczb całkowitych aby przekroczyć wartość 100 ", y);
+            Console.ReadKey();
+        }
+    }
+}
