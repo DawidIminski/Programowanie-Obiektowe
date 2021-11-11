@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ćw.3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Zapisz n: ");
+            int n = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine();
+            int x, silnia;
+            silnia = 1;
+            for (x = 1; x <= n; x++)
+            {
+                silnia = silnia * x;
+            }
+            Console.WriteLine("{0}! = {1}", n, silnia);
+            Console.ReadKey();
+        }
+    }
+}
