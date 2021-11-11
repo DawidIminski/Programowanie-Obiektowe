@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ćw.3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Zapisz 3 liczby calkowite: ");
+        int I, II, III;
+            I = Convert.ToInt16(Console.ReadLine());
+            II = Convert.ToInt16(Console.ReadLine());
+            III = Convert.ToInt16(Console.ReadLine());
+            if (I > II)
+            {
+            if (I > III)
+                    Console.WriteLine("Liczba {0} jest wieksza od {1} i {2}", I, II, III);
+            else
+                Console.WriteLine("Liczba {2} jest wieksza od {0} i {1}", I, II, III);
+            }
+            else if (II > III)
+                Console.WriteLine("Liczba {1} jest wieksza od {0} i {2}", I, II, III);
+            else
+                Console.WriteLine("Liczba {2} jest wieksza od {0} i {1}", I, II, III);
+            Console.ReadKey();
+        }
+    }
+}
