@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Auto
+{
+    class Car
+    {
+        private string marka;
+        private int rok;
+        private int iloscDrzwi;
+        public double srednieSpalanie;
+        private string model;
+        private double pojemnoscSilnika;
+        
+
+        public Car(string x, int y)
+        {
+            if (y > 1975 && y < 2020)
+            {
+                marka = x;
+                rok = y;
+            }
+            else
+            {
+                Console.WriteLine("Wpisałeś zły rocznik");
+            }
+        }
+
+        public void ShowCar()
+        {
+            Console.WriteLine("Marka: {0, -10} Rok produkcji: {1}", marka, rok);
+        }
+
+        private double ObliczSpalanie(double road)
+        {
+            double spalanie = (srednieSpalanie * road);
+            return spalanie;
+        }
+
+        public double ObliczKosztPrzejazdu(double road, double price)
+        {
+            double koszt = ObliczSpalanie(road) * price;
+            return koszt;
+        }
+    }
+}
